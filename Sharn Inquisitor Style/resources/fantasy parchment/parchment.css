@@ -1,0 +1,76 @@
+:root {
+    --body-text: #3f4548;
+    --link-text: #296282;
+    --text-help: #3f4548;
+    --half-fade: rgba( 255, 255, 255, 0.5 );
+    --bg-gradient: linear-gradient(rgba(0,0,0,0), rgba(255,255,255,0.5));
+    --bg-parchment: url("https://raw.githubusercontent.com/scanime/kanka/main/css/fantasy%20parchment/parchment4.jpg");
+}
+/** Parchment backgrounds **/
+#app { background-image: var(--bg-parchment); background-position: right center; background-repeat: no-repeat; background-attachment: fixed; }
+.content-wrapper { background-image: var(--bg-parchment); background-position: right center; background-repeat: no-repeat; background-attachment: fixed; }
+div.entity-submenu .box, div.box-solid, .panel.panel-default:not(.note-editor) {border: 1px solid rgba(0,0,0,0.33);box-shadow: 0 0 5px #000;background-image: var(--bg-parchment); }
+div.box-body {background-color: rgba(255,255,255,0.5);}
+div.box.box-solid > div.box-header { background-image: linear-gradient(rgba(0,0,0,0), rgba(255,255,255,0.5)); border-bottom: 0; }
+#app > div > section.content > div.box { background-image: var(--bg-parchment); background-position: top center; box-shadow: 0 0 5px #000; }
+div.box.no-border.datagrid-filters > div { background-image: var(--bg-gradient); border-bottom: 0; }
+.box .box-footer { background-image: var(--bg-gradient); }
+.panel-body { background-color: var(--half-fade); }
+.pinned-entity.preview { background-image: none; }
+.panel .panel-body .preview:before { background: none; }
+
+/** Timelime **/
+.timeline>li>.timeline-item>.timeline-header { background-color: rgba(0,0,0,0); background-image: var(--bg-gradient); border-bottom: 0; }
+.timeline>li>.timeline-item>.timeline-body, .timeline>li>.timeline-item>.timeline-footer, div.box-footer { background-color: rgba(255,255,255,0.5); }
+.timeline>li>.timeline-item { background-image: var(--bg-parchment); background-position: top center; box-shadow: 0 0 5px #000; border: 1px solid rgba(0,0,0,0.33); }
+ul.timeline > li > div.timeline-item > div.box { background-image: var(--bg-parchment); margin-bottom: 0; }
+ul.timeline > li > div.timeline-item > div.box > div.box-header { background-image: linear-gradient(rgba(0,0,0,0), rgba(255,255,255,0.5));
+    border-bottom: 0; }
+
+/** Navbar & Search **/
+header#header.bg-navbar { padding-bottom: 10px; background-image: var(--bg-parchment); background-position: top center; }
+header#header.bg-navbar > nav {height: 4.5rem;background-image: url("https://raw.githubusercontent.com/scanime/kanka/main/css/fantasy%20parchment/tear4.png");background-size: auto 101%;align-items:  flex-start;padding-top: 0.25rem;}
+aside.search-drawer { margin-top: 4rem; background-image: var(--bg-parchment); background-position: top right; box-shadow: 0 0 5px black; }
+aside.search-drawer > .bg-lookup { background-color: rgba(255,255,255,0.5); }
+
+/** Edit entry **/
+.nav-tabs-custom>.nav-tabs>li.active { }
+.nav-tabs-custom>.nav-tabs>li { border-top: none; background-image: var(--bg-parchment); background-position: top center; }
+.nav-tabs-custom>.nav-tabs>li>a { background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2),rgba(0,0,0,0.5)), var(--bg-parchment); }
+.nav-tabs-custom>.nav-tabs>li>a:hover { background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2),rgba(0,0,0,0.5)), var(--bg-parchment); }
+.nav-tabs-custom>.nav-tabs>li.active>a { background-image: var(--bg-parchment); }
+#entity-form section.content > div.nav-tabs-custom > ul { background: none; }
+#entity-form section.content > div.nav-tabs-custom > div.tab-content { background-image: var(--bg-parchment); background-position: top center; box-shadow: 0 0 5px #000; }
+form#map-marker-form > .nav-tabs-custom, form#map-marker-form .nav-tabs-custom .tab-content { background: var(--bg-parchment); }
+form#map-marker-form > .nav-tabs-custom>.nav-tabs { background-color: rgba( 255, 255, 255, 0.5 ); }
+
+.panel.panel-default.widget-preview, .panel.panel- { background-image: var(--bg-parchment); background-position: top center; box-shadow: 0 0 5px #000; border: 1px solid rgba(0,0,0,0.33); }
+
+.nav>li>a:active, .nav>li>a:focus, .nav>li>a:hover { background: rgba(255,255,255,0.25); }
+
+/** Lighten hover **/
+#app > div > section.content > div.row > div.col-md-3 > div > div.box-body > ul > li > a:hover, .table-hover>tbody>tr:hover { background-color: rgba(255,255,255,0.25); }
+
+/** add little glow to some links **/
+.content-wrapper a:not(.btn):not(.sidebar-toggle):not(.dropdown-toggle):not(.mention) { text-shadow: 0 0 3px #fff, 0 0 5px #fff; font-variant: small-caps; font-weight: 600; }
+.entity-header-text a:not(.btn) { text-shadow: none!important; }
+.entity-tags > a { text-shadow: unset!important; }
+.entity-submenu > .box-body > ul.nav > li > a > span.label[data-original-title="Boosted campaign feature"] { text-shadow: none; } /* no glowing boosted icon */
+.btn-box-tool[title="Edit"], div#organisation-members .box-tools .btn-box-tool, .dropdown-toggle.btn-box-tool { color: var(--text-body); }
+.btn-box-tool[title="Edit"]:hover, div#organisation-members .box-tools .btn-box-tool:hover, .dropdown-toggle.btn-box-tool:hover { background: none!important; text-shadow: 0 0 3px #fff, 0 0 5px #fff; }
+div.box-header > div.box-tools > a.btn.btn-box-tool:hover { background: none!important; text-shadow: 0 0 3px #fff, 0 0 5px #fff; }
+div.box-tools .btn-box-tool { color: #444!important; }
+
+.sidebar-section-box { box-shadow: 0 0 10px #000; background-image: var(--bg-parchment); }
+.sidebar-section-box .sidebar-section-title { padding: 5px; }
+.sidebar-section-box .sidebar-section-title, .sidebar-section-box .sidebar-elements { background-color: var(--half-fade); }
+.sidebar-section-box .sidebar-elements { margin: 0; padding: 0 5px; }
+
+.table-striped>tbody>tr:nth-of-type(odd) {background-color:  var(--half-fade); }
+.table-striped>tbody>tr:nth-of-type(even) {background-color: rgba(255,255,255,0.25); }
+
+/** Entity Grid **/
+.entities-grid div.entity.block { background: var(--bg-parchment); box-shadow: 0 0 5px black; }
+.entities-grid div.entity.block.entity-stack > .bg-box { background: var(--half-fade); }
+.entities-grid div.entity.block > a.block.truncate.text-center { background: var(--half-fade); }
+.entities-grid div.entity.block:hover { box-shadow: 2px 2px 7px black; }
